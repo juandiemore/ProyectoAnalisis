@@ -1,0 +1,54 @@
+   
+        <h1 style="margin-left: 750px"> Tabla ventas Anual</h1>
+
+<table border = 1 style="width:50%;text-align: center; height: 100px; margin-left: 470px;" class="egt">
+    <th class="hola hr" style="background-color:#3F3D3D;color:white;">nombre </th>
+        <th style="background-color:#3F3D3D;color:white;"> Cantidad en Stock</th>
+        <th style="background-color:#3F3D3D;color:white;"> Vendidas </th>
+        <th style="background-color:#3F3D3D;color:white;"> Demanda insatisfecha </th>
+<ng-container *ngFor="let prod of Productos">
+<tr>
+        <td><a href="">{{prod.nombre}}</a></td>
+        <td>{{prod.stock+a}}</td>
+        <td>{{prod.Vendidos+b}}</td>
+        <td *ngIf="prod.Vendidos+b>prod.stock+a;else">{{prod.Vendidos+b - (prod.stock+a)}}</td>
+        </tr>
+        </ng-container>
+</table>
+
+
+
+
+<hr />
+<div id="a">
+
+<button [disabled]="!listo" (click)="comprar1()"> Comprar 1 producto </button>
+<button [disabled]="!listo" (click)="comprar10()"> Comprar 10 productos </button>
+<br>
+<button id="c" [disabled]="!listo" (click)="evento()"> hacer un evento </button>
+
+    <button id="d" [disabled]="!listo" (click)="eventofail()">evento desafortunado</button>
+</div>
+<div id="n">
+ 
+    <ng-container *ngFor="let prod of Productos">
+           <h1>{{prod.nombre}}</h1>
+        <table id="table" border = 1 class="egt">
+            <th >{{prod.nombre}} </th>
+            <th  *ngFor="let m of meses">{{m.mes}} </th>
+            <th> Total</th>
+            <tr>
+            <td id="vendidos">Vendidos</td>
+
+            <th id="meses" *ngFor="let m of meses"> {{m.v}}</th> 
+            <th> {{tot()}}</th>        
+            </tr>
+
+     </table> 
+     <br>
+     <br>
+     <br>
+     <br>
+ </ng-container>
+   
+</div>

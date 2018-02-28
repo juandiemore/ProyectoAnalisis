@@ -1,0 +1,25 @@
+   
+        <h1 style="margin-left: 750px"> Receta unidad</h1>
+
+<table border = 1 style="width:50%;text-align: center; height: 100px; margin-left: 470px;" class="egt">
+    <th class="hola hr" style="background-color:#3F3D3D;color:white;">Ingrediente principal </th>
+        <th style="background-color:#3F3D3D;color:white;"> Cantidad en Stock</th>
+        <th style="background-color:#3F3D3D;color:white;"> Vendidas </th>
+        <th style="background-color:#3F3D3D;color:white;"> Demanda insatisfecha </th>
+<ng-container *ngFor="let pas of pastel">
+<tr>
+        <td>{{pas.receta[0]}}</td>
+        <td>{{pas.precio}}</td>
+        <td>{{pas.venta}}</td>
+       
+        </tr>
+        </ng-container>
+
+</table>
+ <select id="" >
+        	<option *ngFor="let pas of pastel" value="{{pas.receta[0]}}">{{pas.receta[0]}}</option>
+        </select>
+
+
+
+
